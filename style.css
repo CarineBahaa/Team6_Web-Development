@@ -22,7 +22,7 @@ body {
 footer {
     background-color: var(--color);
     color: var(--pink);
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -118,11 +118,30 @@ form {
 
 input,
 textarea {
-    background-color: var(--grey);
     border-radius: 5px;
+    width: 50%;
 }
 
+input:focus,
+textarea:focus {
+    background-color: var(--grey);
+}
+.submit{
+    width: 12%;
+}
 .submit:hover {
     background-color: rgb(34, 107, 243);
     color: white;
+}
+
+/*Mobile phone Interface*/
+@media (max-width:400px) {
+    .our_partner {
+    box-sizing: border-box;
+    width: 20%;
+    height: 50px;
+}
+.submit{
+    width: 50%;
+}
 }
