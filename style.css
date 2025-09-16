@@ -1,0 +1,88 @@
+/*general*/
+:root{
+    --pink : #f9ece8;
+    --color: #E35B63;
+    --grey:rgb(172, 169, 169);
+    --bigger_text: "DynaPuff", system-ui;
+    --small_text: "Sour Gummy", sans-serif;
+}
+
+body {
+    background-color:var(--pink);
+    font-family: var(--small_text);
+    overflow-x:hidden;
+    overflow-y: scroll;
+}
+
+:is(h1, h2, h3, h4, h5, h6){
+    font-family: var(--bigger_text);
+}
+
+footer{
+    background-color: var(--color);
+    color: white;
+    width: 100vw;
+    overflow: hidden;
+}
+
+:where(a.home, a.missing_animals, a.form){
+    text-decoration: none;
+    display: flex;
+    color: rgb(0, 0, 0);
+    gap: 2rem;
+}
+ 
+nav{
+    display: grid;
+    grid-template-columns: 70% 5% 10% 5%;
+    width: 100%;
+    gap: 1rem;
+    box-shadow: 2px 2px 5px var(--grey);
+}
+.header {
+    width: 4rem;
+    height: 4rem;
+}
+
+.our_partner{
+    box-sizing: border-box;
+    width: 10%;
+    height: 100px;
+}
+.our_partners{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+table{
+    border: 2px solid black;
+    width: 100%;
+}
+/*Home page*/
+video{
+    width: 100%;
+}
+
+/*Missing animals page*/
+:where(img.cat, img.dog, img.Turtle, img.Rabbit){
+    width: 100%;
+    height: 40%;
+}
+
+button:hover, .submit:hover{
+    background-color: rgb(34, 107, 243);
+    color: white;
+}
+/*Form page*/
+form{
+    background-color: white;
+    box-shadow: 1px 1px 8px var(--grey);
+    width: 40%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+input, textarea{
+    background-color: var(--grey);
+    border-radius: 5px;
+}
