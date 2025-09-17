@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let els = document.querySelectorAll("img,video");
 
   els.forEach((el, i) => {
-    if (i >= 0) { // من العنصر التالت وطالع فقط
+    if (i >= 0) {
       el.style.opacity = "0";
       el.style.transform = "translateY(40px)";
       el.style.transition = "all 0.8s ease";
