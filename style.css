@@ -25,6 +25,8 @@ footer {
     color: var(--pink);
     width: 100%;
     overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow);
 }
 
 :where(a.home, a.missing_animals, a.form, a.Tips) {
@@ -32,6 +34,7 @@ footer {
     display: flex;
     color: var(--pink);
     gap: 2rem;
+    margin-top: 12px;
 }
 
 nav {
@@ -39,8 +42,9 @@ nav {
     grid-template-columns: 65% 5% 10% 5% 5%;
     width: 100%;
     gap: 1rem;
-    background-color: var(--brown);
     box-shadow: 3px 3px 6px var(--grey);
+    background-color: var(--color);
+
 }
 
 .header {
@@ -61,7 +65,7 @@ nav {
 
 table {
     border: 2px solid black;
-    width: 100%;
+    width: 100vw;
     background-color: white;
     box-shadow: var(--shadow);
 }
@@ -75,6 +79,7 @@ table {
 video {
     width: 100%;
     box-shadow: var(--shadow);
+    position: relative;
 }
 
 .About_Wajd {
@@ -106,6 +111,14 @@ video {
 button:hover {
     background-color: rgb(34, 107, 243);
     color: white;
+}
+
+button {
+    margin: 10px;
+    background-color: var(--color);
+    color: var(--pink);
+    border-color: antiquewhite;
+    align-items: center;
 }
 
 /*Form page*/
@@ -141,7 +154,7 @@ textarea:focus {
 .tips {
     display: grid;
     grid-template-columns: 30% 70%;
-    gap: 5rem;
+    gap: 2rem;
 }
 
 /*Mobile phone Interface*/
@@ -155,4 +168,51 @@ textarea:focus {
     .submit {
         width: 50%;
     }
+
+    nav {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    table {
+        width: 20%;
+    }
+}
+
+/*Animation for table elements*/
+@keyframes scaling {
+    0% {
+        transform: scale(0.5, 0.5);
+    }
+
+    50% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1.5, 1.5);
+    }
+}
+
+.table_a {
+    animation-name: scaling;
+    animation-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+}
+
+/*Animation for submit button*/
+@keyframes button {
+    0%{background-color: var(--color); color: var(--pink);}
+    30%{transform: scale(1.5,1.5);}
+    100%{background-color: white; color: black; transform: scale(1,1);}
+}
+
+.button_a{
+    animation-name: button;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    transition-delay: 1s;
 }
