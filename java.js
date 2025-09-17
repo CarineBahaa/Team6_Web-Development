@@ -20,19 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //Animation for table elements
-//let tables = document.querySelectorAll("table");
-//tables.forEach(table => {
-  //table.addEventListener("click", () => {
-    //table.classList.toggle("table_a");
-  //});
-//});
+let tables = document.querySelectorAll("table");
+tables.forEach(table => {
+  table.addEventListener("click", () => {
+    table.classList.toggle("table_a");
+  });
+});
 
 //Animation + Alert for form
-//function btn(){
-  //let Name = document.getElementById("name").value;
-  //if (Name == "") {
-    //let frm = document.querySelector("form").classList.toggle("button_a");
-  //}else{
-     //alert("Thank you "+ Name +" for finding our animal!! :)");
-  //}
-//}
+function btn(){
+  let Name = document.getElementById("name").value;
+  if (Name == "") {
+    let frm = document.querySelector("form").classList.toggle("button_a");
+  }else{
+     alert("Thank you "+ Name +" for finding our animal!! :)");
+  }
+}
