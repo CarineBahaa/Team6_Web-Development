@@ -28,11 +28,11 @@ tables.forEach(table => {
 });
 
 //Animation + Alert for form
-function btn(){
+function btn() {
   let Name = document.getElementById("name").value;
   if (Name == "") {
     let frm = document.querySelector("form").classList.toggle("button_a");
-  }else{
-     alert("Thank you "+ Name +" for finding our animal!! :)");
+  } else {
+    alert("Thank you " + Name + " for finding our animal!! :)");
   }
 }

@@ -18,6 +18,7 @@ body {
 
 :is(h1, h2, h3, h4, h5, h6) {
     font-family: var(--bigger_text);
+    text-shadow: 1px 1px 3px var(--grey);
 }
 
 footer {
@@ -205,12 +206,23 @@ textarea:focus {
 
 /*Animation for submit button*/
 @keyframes button {
-    0%{background-color: var(--color); color: var(--pink);}
-    30%{transform: scale(1.5,1.5);}
-    100%{background-color: white; color: black; transform: scale(1,1);}
+    0% {
+        background-color: var(--color);
+        color: var(--pink);
+    }
+
+    30% {
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+        background-color: white;
+        color: black;
+        transform: scale(1, 1);
+    }
 }
 
-.button_a{
+.button_a {
     animation-name: button;
     animation-duration: 2s;
     animation-timing-function: ease-out;
