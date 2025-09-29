@@ -71,6 +71,10 @@ table {
     box-shadow: var(--shadow);
 }
 
+table:hover{
+    color: #9e161f;
+}
+
 ::selection {
     background-color: var(--brown);
     color: var(--pink);
@@ -146,7 +150,7 @@ textarea:focus {
     width: 12%;
 }
 
-.submit:hover {
+.submit:hover, .animalimg:hover {
     background-color: rgb(34, 107, 243);
     color: white;
 }
@@ -158,31 +162,7 @@ textarea:focus {
     gap: 2rem;
 }
 
-/*Mobile phone Interface*/
-@media (max-width:400px) {
-    .our_partner {
-        box-sizing: border-box;
-        width: 20%;
-        height: 50px;
-    }
-
-    .submit {
-        width: 50%;
-    }
-
-    nav {
-        display: grid;
-        grid-template-columns: auto auto auto auto auto;
-        width: 100%;
-        gap: 1rem;
-    }
-
-    table {
-        width: 20%;
-    }
-}
-
-/*Animation for table elements*/
+/*Animation: scaling elements*/
 @keyframes scaling {
     0% {
         transform: scale(0.5, 0.5);
@@ -200,6 +180,13 @@ textarea:focus {
 .table_a {
     animation-name: scaling;
     animation-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+}
+
+.our_partner:hover{
+    animation-name: scaling;
+    animation-duration: 2s;
     transition-timing-function: ease-in-out;
     transition-delay: 1s;
 }
@@ -227,4 +214,54 @@ textarea:focus {
     animation-duration: 2s;
     animation-timing-function: ease-out;
     transition-delay: 1s;
+}
+
+/*Mobile phone Interface*/
+@media (max-width:400px) {
+    .our_partner {
+        box-sizing: border-box;
+        width: 20%;
+        height: 50px;
+    }
+
+    .submit {
+        width: 50%;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    table {
+        width: 20%;
+    }
+}
+
+/*Tablet Interface*/
+@media (max-width:700px) {
+
+       .our_partner {
+        box-sizing: border-box;
+        width: 20%;
+        height: 100px;
+    }
+
+    .submit {
+        width: 50%;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    table {
+        width: 80%;
+    }
+    
 }
