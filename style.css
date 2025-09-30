@@ -71,8 +71,9 @@ table {
     box-shadow: var(--shadow);
 }
 
-table:hover{
-    color: #9e161f;
+table:hover {
+    background-color: var(--color);
+    color: var(--pink);
 }
 
 ::selection {
@@ -150,7 +151,8 @@ textarea:focus {
     width: 12%;
 }
 
-.submit:hover, .animalimg:hover {
+.submit:hover,
+.animalimg:hover {
     background-color: rgb(34, 107, 243);
     color: white;
 }
@@ -160,6 +162,24 @@ textarea:focus {
     display: grid;
     grid-template-columns: 30% 70%;
     gap: 2rem;
+}
+
+.popuptext {
+    display: inline;
+    visibility: hidden;
+    background-color: var(--brown);
+    color: var(--pink);
+    text-align: center;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: large;
+    text-shadow: var(--shadow);
+}
+
+.popup .show {
+    visibility: visible;
+    z-index: 1;
+    animation: fadeIn 1s;
 }
 
 /*Animation: scaling elements*/
@@ -184,7 +204,7 @@ textarea:focus {
     transition-delay: 1s;
 }
 
-.our_partner:hover{
+.our_partner:hover {
     animation-name: scaling;
     animation-duration: 2s;
     transition-timing-function: ease-in-out;
@@ -221,7 +241,6 @@ textarea:focus {
     .our_partner {
         box-sizing: border-box;
         width: 20%;
-        height: 30px;
     }
 
     .submit {
@@ -243,7 +262,7 @@ textarea:focus {
 /*Tablet Interface*/
 @media (max-width:800px) {
 
-       .our_partner {
+    .our_partner {
         box-sizing: border-box;
         width: 20%;
         height: 100px;
@@ -263,29 +282,20 @@ textarea:focus {
     table {
         width: 80%;
     }
-    
+
 }
 
-.popuptext {
-  display: inline;
-  visibility: hidden;
-  background-color: var(--brown);
-  color: var(--pink);
-  text-align: center;
-  border-radius: 6px;
-  padding: 15px ;
-  font-size: large;
-  text-shadow: var(--shadow);
-}
-
-.popup .show {
-  visibility: visible;
-  z-index: 1;
-  animation: fadeIn 1s;
-}
-
+/*pop-up animation*/
 @keyframes fadeIn {
-  0% {opacity: 0;}
-  50% {opacity: 0.5;}
-  100% {opacity:1 ;}
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
