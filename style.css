@@ -221,7 +221,7 @@ textarea:focus {
     .our_partner {
         box-sizing: border-box;
         width: 20%;
-        height: 50px;
+        height: 30px;
     }
 
     .submit {
@@ -241,7 +241,7 @@ textarea:focus {
 }
 
 /*Tablet Interface*/
-@media (max-width:700px) {
+@media (max-width:800px) {
 
        .our_partner {
         box-sizing: border-box;
@@ -264,4 +264,28 @@ textarea:focus {
         width: 80%;
     }
     
+}
+
+.popuptext {
+  display: inline;
+  visibility: hidden;
+  background-color: var(--brown);
+  color: var(--pink);
+  text-align: center;
+  border-radius: 6px;
+  padding: 15px ;
+  font-size: large;
+  text-shadow: var(--shadow);
+}
+
+.popup .show {
+  visibility: visible;
+  z-index: 1;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  50% {opacity: 0.5;}
+  100% {opacity:1 ;}
 }

@@ -36,3 +36,9 @@ function btn() {
     alert("Thank you " + Name + " for finding our animal!! :)");
   }
 }
+
+//Popup in index page
+function popup() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
