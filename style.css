@@ -88,7 +88,8 @@ video {
     position: relative;
 }
 
-.About_Wajd {
+.About_Wajd,
+.joke {
     display: flex;
     justify-content: space-between;
 }
@@ -107,6 +108,7 @@ video {
     color: var(--color);
     font-size: larger;
 }
+
 
 /*Missing animals page*/
 :where(img.cat, img.dog, img.Turtle, img.Rabbit) {
@@ -176,7 +178,7 @@ textarea:focus {
     text-shadow: var(--shadow);
 }
 
-.popup .show {
+.show {
     visibility: visible;
     z-index: 1;
     animation: fadeIn 1s;
@@ -240,11 +242,13 @@ textarea:focus {
 @media (max-width:400px) {
     .our_partner {
         box-sizing: border-box;
-        width: 20%;
+        width: 10%;
+
+
     }
 
     .submit {
-        width: 50%;
+        width: 100%;
     }
 
     nav {
@@ -269,7 +273,7 @@ textarea:focus {
     }
 
     .submit {
-        width: 50%;
+        width: 30%;
     }
 
     nav {

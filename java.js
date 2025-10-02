@@ -33,7 +33,22 @@ function btn() {
   if (Name == "") {
     let frm = document.querySelector("form").classList.toggle("button_a");
   } else {
-    alert("Thank you " + Name + " for finding our animal!! :)");
+    // Event Delegation for form 
+    document.getElementById("formbuttons").addEventListener("click", function (e) {
+      if (e.target && e.target.type === "button") {
+        if (e.target.value === "Submit") {
+          try {
+            alert("Thank you for submitting the form!");
+            console.log("Form submitted successfully");
+          }
+
+          catch (error) {
+            console.error("Error submitting form:", error);
+            alert("Something went wrong. Please try again.");
+          }
+        }
+      }
+    });
   }
 }
 
@@ -43,22 +58,6 @@ function popup() {
   popup.classList.toggle("show");
 }
 
-// Event Delegation for form 
-document.getElementById("formbuttons").addEventListener("click", function (e) {
-  if (e.target && e.target.type === "button") {
-    if (e.target.value === "Submit") {
-      try {
-        alert("Thank you for submitting the form!");
-        console.log("Form submitted successfully");
-      }
-
-      catch (error) {
-        console.error("Error submitting form:", error);
-        alert("Something went wrong. Please try again.");
-      }
-    }
-  }
-});
 //joke api
 document.getElementById("btn").addEventListener("click", () => {
   fetch("https://official-joke-api.appspot.com/random_joke")
